@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: nginx
+    meta.helm.sh/release-namespace: nginx
+  creationTimestamp: "2023-02-24T14:43:51Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app.kubernetes.io/instance: nginx
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: nginx-nginx-ingress
+    helm.sh/chart: nginx-ingress-0.16.2
+  name: nginx-nginx-ingress
+  namespace: nginx
+  resourceVersion: "21668"
+  uid: fd37d96c-35db-4551-b953-336b5d1c6505
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.0.56.118
+  clusterIPs:
+  - 10.0.56.118
+  externalTrafficPolicy: Local
+  healthCheckNodePort: 30455
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    nodePort: 30918
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: https
+    nodePort: 30891
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    app: nginx-nginx-ingress
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 52.226.208.15

@@ -1,0 +1,142 @@
+apiVersion: rbac.authorization.k8s.io/v1	
+kind: ClusterRole	
+metadata:	
+  annotations:	
+    meta.helm.sh/release-name: nginx	
+    meta.helm.sh/release-namespace: nginx	
+  labels:	
+    app.kubernetes.io/instance: nginx	
+    app.kubernetes.io/managed-by: Helm	
+    app.kubernetes.io/name: nginx-nginx-ingress	
+    helm.sh/chart: nginx-ingress-0.16.2	
+  managedFields:	
+    - apiVersion: rbac.authorization.k8s.io/v1	
+      fieldsType: FieldsV1	
+      fieldsV1:	
+        'f:metadata':	
+          'f:annotations':	
+            .: {}	
+            'f:meta.helm.sh/release-name': {}	
+            'f:meta.helm.sh/release-namespace': {}	
+          'f:labels':	
+            .: {}	
+            'f:app.kubernetes.io/instance': {}	
+            'f:app.kubernetes.io/managed-by': {}	
+            'f:app.kubernetes.io/name': {}	
+            'f:helm.sh/chart': {}	
+        'f:rules': {}	
+      manager: helm	
+      operation: Update	
+      time: '2023-02-24T14:43:51Z'	
+  name: nginx-nginx-ingress	
+  resourceVersion: '21588'	
+  uid: 01834e3a-4eaa-4c23-ac9b-1aeef8d0c0f4	
+rules:	
+  - apiGroups:	
+      - discovery.k8s.io	
+    resources:	
+      - endpointslices	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+  - apiGroups:	
+      - ''	
+    resources:	
+      - services	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+  - apiGroups:	
+      - ''	
+    resources:	
+      - secrets	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+  - apiGroups:	
+      - ''	
+    resources:	
+      - configmaps	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+      - update	
+      - create	
+  - apiGroups:	
+      - ''	
+    resources:	
+      - pods	
+    verbs:	
+      - list	
+      - watch	
+  - apiGroups:	
+      - ''	
+    resources:	
+      - namespaces	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+  - apiGroups:	
+      - ''	
+    resources:	
+      - events	
+    verbs:	
+      - create	
+      - patch	
+      - list	
+  - apiGroups:	
+      - coordination.k8s.io	
+    resources:	
+      - leases	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+      - update	
+      - create	
+  - apiGroups:	
+      - networking.k8s.io	
+    resources:	
+      - ingresses	
+    verbs:	
+      - get	
+      - list	
+      - watch	
+  - apiGroups:	
+      - networking.k8s.io	
+    resources:	
+      - ingressclasses	
+    verbs:	
+      - get	
+  - apiGroups:	
+      - networking.k8s.io	
+    resources:	
+      - ingresses/status	
+    verbs:	
+      - update	
+  - apiGroups:	
+      - k8s.nginx.org	
+    resources:	
+      - virtualservers	
+      - virtualserverroutes	
+      - globalconfigurations	
+      - transportservers	
+      - policies	
+    verbs:	
+      - list	
+      - watch	
+      - get	
+  - apiGroups:	
+      - k8s.nginx.org	
+    resources:	
+      - virtualservers/status	
+      - virtualserverroutes/status	
+      - policies/status	
+      - transportservers/status	
+    verbs:	
+      - update
