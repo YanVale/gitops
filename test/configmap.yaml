@@ -32,5 +32,5 @@ metadata:
       time: '2023-02-24T19:30:03Z'	
   name: nginx-nginx-ingress	
   namespace: nginx	
-  resourceVersion: '92072'	
+  resourceVersion: '96450'	
   uid: a9b84778-8e8b-4172-861d-2992c372f2e4
