@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:	
   annotations:	
     control-plane.alpha.kubernetes.io/leader: >-	
-      {"holderIdentity":"nginx-nginx-ingress-7ccd849c68-f7njg","leaseDurationSeconds":30,"acquireTime":"2023-02-24T19:15:57Z","renewTime":"2023-02-24T19:42:53Z","leaderTransitions":1}	
+      {"holderIdentity":"nginx-nginx-ingress-7ccd849c68-f7njg","leaseDurationSeconds":30,"acquireTime":"2023-02-24T19:15:57Z","renewTime":"2023-02-24T19:49:18Z","leaderTransitions":1}
     meta.helm.sh/release-name: nginx	
     meta.helm.sh/release-namespace: nginx	
   labels:	
