@@ -40,5 +40,5 @@ metadata:
       time: '2023-02-24T19:15:57Z'	
   name: nginx-nginx-ingress-leader-election	
   namespace: nginx	
-  resourceVersion: '95252'	
+  resourceVersion: '97194'	
   uid: 467a4a9b-3389-47e2-8c26-2278d0361815
