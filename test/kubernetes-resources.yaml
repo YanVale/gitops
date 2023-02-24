@@ -9,7 +9,6 @@ items:
     labels:
       app.kubernetes.io/instance: nginx
       app.kubernetes.io/name: nginx-nginx-ingress
-      helm.sh/chart: nginx-ingress-0.16.2
     name: nginx-nginx-ingress
     namespace: nginx
   spec:
@@ -111,7 +110,7 @@ items:
             timeoutSeconds: 1
           resources:
             requests:
-              cpu: 200m
+              cpu: 100m
               memory: 128Mi
           securityContext:
             allowPrivilegeEscalation: true
@@ -131,3 +130,11 @@ items:
         serviceAccount: nginx-nginx-ingress
         serviceAccountName: nginx-nginx-ingress
         terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+kind: List
+metadata:
+  resourceVersion: ""
